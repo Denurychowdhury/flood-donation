@@ -16,17 +16,8 @@ getId('input-btn').addEventListener('click', function () {
     getId('total-amounts').innerText = getTotalamount(availableValue,inputValue);
     const donatePlace = GetTextId('donation-place');
     const historyDetails =getId('history');
-    const historyCard = document.createElement('div')
-    historyCard.classList.add('p-4','border','border-gray-200','rounded-xl','my-5')
-    historyCard.innerHTML = `
-    <div class="rounded-xl">
-                    <h1 class="font-extrabold"><span>${inputValue} Taka</span> ${donatePlace}, Bangladesh
-                    </h1>
-                    <p class="font-light text-base">Date : ${new Date().toDateString()} ${new Date().toTimeString()}
-                    </p>
-    </div> 
-    `;
-    historyDetails.appendChild(historyCard);
+    const historyCard = createElement(inputValue, donatePlace);
+    historyDetails.insertBefore(historyCard, historyDetails.firstChild);
     removeInput('input-value')
     my_modal_1.showModal()
 })
@@ -44,18 +35,8 @@ getId('btn-two').addEventListener('click', function () {
     getId('total-amounts').innerText= getTotalamount(availableValue,inputValue);
     const donatePlace = GetTextId('donation-place-two');
     const historyDetails =getId('history');
-    const historyCard = document.createElement('div')
-    historyCard.classList.add('p-4','border','border-gray-200','rounded-xl','my-5')
-    historyCard.innerHTML = `
-    <div class=" rounded-xl">
-                    <h1 class="font-extrabold"><span>${inputValue} Taka</span> ${donatePlace}, Bangladesh
-                    </h1>
-                   <p class="font-light text-base">Date : ${new Date().toDateString()} ${new Date().toTimeString()}
-                    </p>
-    </div>
-    
-    `;
-    historyDetails.appendChild(historyCard)
+    const historyCard = createElement(inputValue, donatePlace);
+    historyDetails.insertBefore(historyCard, historyDetails.firstChild);
     removeInput('input-value-two')
     my_modal_1.showModal()
 })
@@ -73,18 +54,8 @@ getId('third-input-button').addEventListener('click', function () {
     getId('total-amounts').innerText = getTotalamount(availableValue,inputValue);
     const donatePlace = GetTextId('donation-place-three');
     const historyDetails =getId('history');
-    const historyCard = document.createElement('div')
-    historyCard.classList.add('p-4','border','border-gray-200','rounded-xl','my-5')
-    historyCard.innerHTML = `
-    <div class=" rounded-xl">
-                    <h1 class="font-extrabold"><span>${inputValue} Taka</span> ${donatePlace}, Bangladesh
-                    </h1>
-                    <p class="font-light text-base">Date : ${new Date().toDateString()} ${new Date().toTimeString()}
-                    </p>
-    </div>
-    
-    `;
-    historyDetails.appendChild(historyCard);
+    const historyCard = createElement(inputValue, donatePlace);
+    historyDetails.insertBefore(historyCard, historyDetails.firstChild);
     removeInput('input-value-three');
     my_modal_1.showModal()
 })
@@ -99,11 +70,11 @@ historyBtn.addEventListener('click', function () {
     historyBtn.classList.add('bg-primary')
 })
 // donaton Btn
-const donationBtn =getId('donation-btn')
+const donationBtn = getId('donation-btn')
 donationBtn.addEventListener('click', function (){
     removHidden('donation-page')
     donationBtn.classList.add('bg-primary');
-    const historyBtn =getId('history-btn')
+    const historyBtn = getId('history-btn');
     historyBtn.classList.remove('bg-primary');
     addHidden('history')
 })
