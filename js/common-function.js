@@ -12,3 +12,30 @@ function GetTextId(id) {
     const ammountValue =document.getElementById(id).innerText;
     return ammountValue;
 }
+function addAmount(ammountValue,inputValue) {
+    const amount = ammountValue + inputValue;
+    return amount;
+}
+function getTotalamount(availableValu,inputValu) {
+    const total = availableValu - inputValu;
+    return total;
+}
+
+function getId(id) {
+    const identity = document.getElementById(id);
+    return identity;
+}
+
+// const donationPage =getId('donation-page');
+// donationPage.classList.add('hidden');
+
+function addHidden(id) {
+    const donation = document.getElementById(id)
+    donation.classList.add('hidden');
+    return;
+}
+function removHidden(id) {
+    const donation = document.getElementById(id)
+    donation.classList.remove('hidden');
+    return;
+}
