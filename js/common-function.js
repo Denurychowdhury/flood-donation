@@ -39,3 +39,7 @@ function removHidden(id) {
     donation.classList.remove('hidden');
     return;
 }
+function removeInput(id) {
+    const remove = document.getElementById(id).value = '';
+    return remove;
+}

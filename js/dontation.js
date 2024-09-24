@@ -20,13 +20,14 @@ getId('input-btn').addEventListener('click', function () {
     historyCard.classList.add('p-4','border','border-gray-200','rounded-xl','mb-5')
     historyCard.innerHTML = `
     <div class="rounded-xl">
-                    <h1 class="font-extrabold"><span>${inputValue}</span> ${donatePlace}, Bangladesh
+                    <h1 class="font-extrabold"><span>${inputValue} TK</span> ${donatePlace}, Bangladesh
                     </h1>
                     <p class="font-light text-base">Date : ${new Date().toDateString()} ${new Date().toTimeString()}
                     </p>
     </div> 
     `;
-    historyDetails.appendChild(historyCard)
+    historyDetails.appendChild(historyCard);
+    removeInput('input-value')
     my_modal_1.showModal()
 })
 // card-2
@@ -47,7 +48,7 @@ getId('btn-two').addEventListener('click', function () {
     historyCard.classList.add('p-4','border','border-gray-200','rounded-xl','mb-5')
     historyCard.innerHTML = `
     <div class=" rounded-xl">
-                    <h1 class="font-extrabold"><span>${inputValue}</span> ${donatePlace}, Bangladesh
+                    <h1 class="font-extrabold"><span>${inputValue} TK</span> ${donatePlace}, Bangladesh
                     </h1>
                    <p class="font-light text-base">Date : ${new Date().toDateString()} ${new Date().toTimeString()}
                     </p>
@@ -55,6 +56,7 @@ getId('btn-two').addEventListener('click', function () {
     
     `;
     historyDetails.appendChild(historyCard)
+    removeInput('input-value-two')
     my_modal_1.showModal()
 })
 // card-3
@@ -75,27 +77,24 @@ getId('third-input-button').addEventListener('click', function () {
     historyCard.classList.add('p-4','border','border-gray-200','rounded-xl','mb-5')
     historyCard.innerHTML = `
     <div class=" rounded-xl">
-                    <h1 class="font-extrabold"><span>${inputValue}</span> ${donatePlace}, Bangladesh
+                    <h1 class="font-extrabold"><span>${inputValue}TK</span> ${donatePlace}, Bangladesh
                     </h1>
                     <p class="font-light text-base">Date : ${new Date().toDateString()} ${new Date().toTimeString()}
                     </p>
     </div>
     
     `;
-    historyDetails.appendChild(historyCard)
+    historyDetails.appendChild(historyCard);
+    removeInput('input-value-three');
     my_modal_1.showModal()
 })
 
 // history btn
 const historyBtn =getId('history-btn')
 historyBtn.addEventListener('click', function () {
-    // const donationPage =getId('donation-page');
-    // donationPage.classList.add('hidden');
     addHidden('donation-page')
     const donationBtn =getId('donation-btn')
     donationBtn.classList.remove('bg-primary');
-    // const historyPage =getId('history');
-    // historyPage.classList.remove('hidden')
     removHidden('history')
     historyBtn.classList.add('bg-primary')
     historyBtn.classList.remove('bg-transparent','border-2', 'border-gray-500')
@@ -103,13 +102,9 @@ historyBtn.addEventListener('click', function () {
 // donaton Btn
 const donationBtn =getId('donation-btn')
 donationBtn.addEventListener('click', function (){
-    // const donationPage =getId('donation-page');
-    // donationPage.classList.remove('hidden');
     removHidden('donation-page')
     donationBtn.classList.add('bg-primary');
     const historyBtn =getId('history-btn')
     historyBtn.classList.add('bg-transparent');
-    // const historyPage =getId('history');
-    // historyPage.classList.add('hidden')
     addHidden('history')
 })
