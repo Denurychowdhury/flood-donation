@@ -17,10 +17,10 @@ getId('input-btn').addEventListener('click', function () {
     const donatePlace = GetTextId('donation-place');
     const historyDetails =getId('history');
     const historyCard = document.createElement('div')
-    historyCard.classList.add('p-4','border','border-gray-200','rounded-xl','mb-5')
+    historyCard.classList.add('p-4','border','border-gray-200','rounded-xl','my-5')
     historyCard.innerHTML = `
     <div class="rounded-xl">
-                    <h1 class="font-extrabold"><span>${inputValue} TK</span> ${donatePlace}, Bangladesh
+                    <h1 class="font-extrabold"><span>${inputValue} Taka</span> ${donatePlace}, Bangladesh
                     </h1>
                     <p class="font-light text-base">Date : ${new Date().toDateString()} ${new Date().toTimeString()}
                     </p>
@@ -45,10 +45,10 @@ getId('btn-two').addEventListener('click', function () {
     const donatePlace = GetTextId('donation-place-two');
     const historyDetails =getId('history');
     const historyCard = document.createElement('div')
-    historyCard.classList.add('p-4','border','border-gray-200','rounded-xl','mb-5')
+    historyCard.classList.add('p-4','border','border-gray-200','rounded-xl','my-5')
     historyCard.innerHTML = `
     <div class=" rounded-xl">
-                    <h1 class="font-extrabold"><span>${inputValue} TK</span> ${donatePlace}, Bangladesh
+                    <h1 class="font-extrabold"><span>${inputValue} Taka</span> ${donatePlace}, Bangladesh
                     </h1>
                    <p class="font-light text-base">Date : ${new Date().toDateString()} ${new Date().toTimeString()}
                     </p>
@@ -74,10 +74,10 @@ getId('third-input-button').addEventListener('click', function () {
     const donatePlace = GetTextId('donation-place-three');
     const historyDetails =getId('history');
     const historyCard = document.createElement('div')
-    historyCard.classList.add('p-4','border','border-gray-200','rounded-xl','mb-5')
+    historyCard.classList.add('p-4','border','border-gray-200','rounded-xl','my-5')
     historyCard.innerHTML = `
     <div class=" rounded-xl">
-                    <h1 class="font-extrabold"><span>${inputValue}TK</span> ${donatePlace}, Bangladesh
+                    <h1 class="font-extrabold"><span>${inputValue} Taka</span> ${donatePlace}, Bangladesh
                     </h1>
                     <p class="font-light text-base">Date : ${new Date().toDateString()} ${new Date().toTimeString()}
                     </p>
@@ -97,7 +97,6 @@ historyBtn.addEventListener('click', function () {
     donationBtn.classList.remove('bg-primary');
     removHidden('history')
     historyBtn.classList.add('bg-primary')
-    historyBtn.classList.remove('bg-transparent','border-2', 'border-gray-500')
 })
 // donaton Btn
 const donationBtn =getId('donation-btn')
@@ -105,6 +104,6 @@ donationBtn.addEventListener('click', function (){
     removHidden('donation-page')
     donationBtn.classList.add('bg-primary');
     const historyBtn =getId('history-btn')
-    historyBtn.classList.add('bg-transparent');
+    historyBtn.classList.remove('bg-primary');
     addHidden('history')
 })
