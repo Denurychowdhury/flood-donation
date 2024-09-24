@@ -9,7 +9,7 @@ getId('input-btn').addEventListener('click', function () {
     const availableValue = GetAmountId('total-amounts');
     const inputs = getId('input-value').value;
     if (availableValue<inputValue||isNaN(inputValue) || inputValue <= 0 ||isNaN(inputs)){
-        alert('please input Correct Amount!');
+        alert('Please input Correct Amount !');
         return;
     }
     getId('money-input').innerText = addAmount(ammountValue, inputValue);
@@ -37,7 +37,7 @@ getId('btn-two').addEventListener('click', function () {
     const availableValue = GetAmountId('total-amounts');
     const inputs =getId('input-value-two').value;
     if (availableValue<inputValue||isNaN(inputValue) || inputValue <= 0||isNaN(inputs)) {
-        alert('please input Correct Amount');
+        alert('Please input Correct Amount !');
         return;
     }
     getId('money-input-two').innerText = addAmount(ammountValue, inputValue);
@@ -66,7 +66,7 @@ getId('third-input-button').addEventListener('click', function () {
     const availableValue = GetAmountId('total-amounts');
      const inputs = getId('input-value-three').value;
     if (availableValue<inputValue||isNaN(inputValue) || inputValue <= 0||isNaN(inputs)) {
-        alert('please input Correct Amount');
+        alert('please input Correct Amount !');
         return;
     }
     getId('money-input-three').innerText = addAmount(ammountValue,inputValue);
