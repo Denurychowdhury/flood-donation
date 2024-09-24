@@ -54,7 +54,7 @@ function removeInput(id) {
 // creat history part
 function createElement(inputValue,donatePlace) {
 const historyCard = document.createElement('div')
-    historyCard.classList.add('p-4','border','border-gray-200','rounded-xl','my-5')
+    historyCard.classList.add('p-4', 'border', 'border-gray-200', 'rounded-xl', 'my-5');
     historyCard.innerHTML = `
     <div class=" rounded-xl">
                     <h1 class="font-extrabold"><span>${inputValue} Taka</span> ${donatePlace}, Bangladesh
